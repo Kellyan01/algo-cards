@@ -26,6 +26,15 @@ function afficherAnimal($animal){
     </article>";
 }
 
+//AfficherXeno()
+function afficherXeno($xeno){
+    echo "<article style= 'border-bottom : 3px solid black '>
+        <h2>nom : {$xeno['name']}</h2>
+        <p>espece : {$xeno['espece']}</p>
+        <p>age : {$xeno['age']} ans</p>
+        <p>niveau de menace: {$xeno['menace']}</p>
+    </article>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -42,6 +51,7 @@ function afficherAnimal($animal){
             //Test de fonction
             afficherHumain($USERS_HUMAN[0]);
             afficherAnimal($USERS_PET[0]);
+            afficherXeno($USERS_XENO[0]);
         ?>
     </main>
     <footer></footer>
