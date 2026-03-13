@@ -35,6 +35,27 @@ function afficherXeno($xeno){
         <p>niveau de menace: {$xeno['menace']}</p>
     </article>";
 }
+
+//profil()
+function profil($tab){
+    foreach($tab as $profil){
+        switch($profil['type']){
+            case 'humain' :
+                afficherHumain($profil);
+                break;
+            case 'animal de compagnie' :
+                afficherAnimal($profil);
+                break;
+            case 'Xeno' :
+                afficherXeno($profil);
+                break;
+            default :
+                echo "<article style= 'border-bottom : 3px solid black '>
+                        <p>Type de Profil non Existant</p>
+                    </article>";
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -52,6 +73,10 @@ function afficherXeno($xeno){
             afficherHumain($USERS_HUMAN[0]);
             afficherAnimal($USERS_PET[0]);
             afficherXeno($USERS_XENO[0]);
+
+            profil($USERS_HUMAN);
+            profil($USERS_PET);
+            profil($USERS_XENO);
         ?>
     </main>
     <footer></footer>
