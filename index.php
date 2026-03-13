@@ -56,6 +56,13 @@ function profil($tab){
         }
     }
 }
+
+//profilAll()
+function profilAll($bigTab){
+    foreach($bigTab as $tab){
+        profil($tab);
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -70,13 +77,15 @@ function profil($tab){
     <main>
         <?php 
             //Test de fonction
-            afficherHumain($USERS_HUMAN[0]);
-            afficherAnimal($USERS_PET[0]);
-            afficherXeno($USERS_XENO[0]);
+            // afficherHumain($USERS_HUMAN[0]);
+            // afficherAnimal($USERS_PET[0]);
+            // afficherXeno($USERS_XENO[0]);
 
-            profil($USERS_HUMAN);
-            profil($USERS_PET);
-            profil($USERS_XENO);
+            // profil($USERS_HUMAN);
+            // profil($USERS_PET);
+            // profil($USERS_XENO);
+
+            profilAll($tabData);
         ?>
     </main>
     <footer></footer>
