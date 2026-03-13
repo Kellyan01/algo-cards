@@ -59,7 +59,7 @@ Faire en sorte qu'elle affiche le profil d'un Xéno avec le code HTML suivant :
 
 13) Faire en sorte que la fonction profil() parcourt chaque tableau associatif du tableau en paramètre.
     
-14) Dans la fonction profil(), pour chaque tableau associatif, SI le tableau est de type "humain", appeler la fonction afficherHumain(). SINON SI le tableau est de type "animal de compagnie", appeler la fonction afficherAnimal(). SINON SI le tableau est de type "Xeno", appeler la fonction afficherXeno(). SINON afficher dans au sein d’un <pre><p></pre> dans  un <pre><article></pre>, le message d'erreur "Type de Profil non Existant".
+14) Dans la fonction profil(), pour chaque tableau associatif, SI le tableau est de type "humain", appeler la fonction afficherHumain(). SINON SI le tableau est de type "animal de compagnie", appeler la fonction afficherAnimal(). SINON SI le tableau est de type "Xeno", appeler la fonction afficherXeno(). SINON afficher dans au sein d’un `<p>` dans  un `<article>`, le message d'erreur "Type de Profil non Existant".
     
 15) Appeler la fonction profil() sur chacun des tableaux $USERS_HUMAN, $USERS_PET, $USERS_XENO.
     
