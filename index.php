@@ -7,7 +7,7 @@ $tabData = [];
 //Remplissage de $tabData
 array_push($tabData, $USERS_HUMAN, $USERS_PET, $USERS_XENO);
 
-//AfficherHuamin()
+//AfficherHumain()
 function afficherHumain($user){
     echo "<article style= 'border-bottom : 3px solid black '>
         <h2>nom : {$user['name']}</h2>
@@ -16,6 +16,15 @@ function afficherHumain($user){
     </article>";
 }
 
+//AfficherAnimal()
+function afficherAnimal($animal){
+    echo "<article style= 'border-bottom : 3px solid black '>
+        <h2>nom : {$animal['name']}</h2>
+        <p>espece : {$animal['espece']}</p>
+        <p>age : {$animal['age']} ans</p>
+        <p>propriétaire : {$animal['propriétaire']}</p>
+    </article>";
+}
 
 ?>
 
@@ -32,6 +41,7 @@ function afficherHumain($user){
         <?php 
             //Test de fonction
             afficherHumain($USERS_HUMAN[0]);
+            afficherAnimal($USERS_PET[0]);
         ?>
     </main>
     <footer></footer>
